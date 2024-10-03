@@ -1,0 +1,36 @@
+<Doctype html></Doctype>
+    <html>
+        <head>
+            <meta charset="UTF">
+            <meta viewport content="width:device-width" initialscale="0.1">
+        </head>
+        <body>
+            <script>
+                function operators(n1,n2,callback){
+                 console.log(callback(n1,n2))
+                }
+                function add(n1,n2){
+                  return n1+n2;
+                }
+                function sub(n1,n2){
+                    return n1-n2;
+                }
+                function mul(n1,n2){
+                    return n1*n2;
+                }
+                function div(n1,n2){
+                    return n1/n2;
+                }
+                function mod(n1,n2){
+                    return n1%n2;
+                }
+
+                operators(5,4,add)
+                operators(5,4,sub)
+                operators(5,4,mul)
+                operators(5,4,div)
+                operators(5,4,mod)
+            
+                </script>
+                </body>
+                </html>

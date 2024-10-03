@@ -1,0 +1,58 @@
+<Doctype html>
+    <html>
+        <head>
+            <meta charset="UTF">
+            <meta viewport content="width:device-width" initialscale="0.1">
+        </head>
+        <body>
+            <script>
+                var person={
+                    name:"pavani",
+                    age:24,
+                    gender:"female",
+                    address:"kmp",
+                    city:"hyd"
+                }
+                var persons={
+
+                }
+                console.log(Object.keys(person))
+                console.log(Object.entries(person))
+                console.log(Object.keys(person).includes("name"))
+                console.log(Object.keys(person).includes("age"))
+                console.log(Object.keys(person).includes("gender"))
+                console.log(Object.keys(person).includes("address"))
+                console.log(Object.keys(person).includes("city"))
+                 
+
+                obj2={isregister:"yes"}
+                for(i in person){
+                    for(j in obj2){
+                        if(i === j){
+                        console.log("valid")
+                        }
+                        else {
+                        console.log("not valid")  
+                        }
+                    }
+                }
+
+                if(typeof entries === typeof keys){
+                    console.log("valid")
+                }
+                else{
+                    console.log("not valid")
+                }
+
+
+                var person2 = {FullName:"pavani",
+                               Pincode:531025,
+                               district:"vizag"}
+                Object.assign(person,person2)
+        
+                console.log(person)
+
+                
+                </script>
+                </body>
+                </html>
