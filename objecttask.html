@@ -19,24 +19,17 @@
                 console.log(Object.keys(person))
                 console.log(Object.entries(person))
                 console.log(Object.keys(person).includes("name"))
-                console.log(Object.keys(person).includes("age"))
-                console.log(Object.keys(person).includes("gender"))
-                console.log(Object.keys(person).includes("address"))
-                console.log(Object.keys(person).includes("city"))
-                 
+            
+                //  validation
 
-                obj2={isregister:"yes"}
-                for(i in person){
-                    for(j in obj2){
-                        if(i === j){
-                        console.log("valid")
-                        }
-                        else {
-                        console.log("not valid")  
-                        }
-                    }
-                }
-
+                var a=(Object.keys(person).includes("gender"))
+                 if(a==true){
+                    console.log("valid")
+                 }
+                 else{
+                    console.log("invalid")
+                 }
+                // validation
                 if(typeof entries === typeof keys){
                     console.log("valid")
                 }
