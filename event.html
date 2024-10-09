@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- create  a HTML elements and add events to them-->
+     <button onclick="names()">name</button>
+     <p ></p>
+     <button ondblclick="colors()">color</button>
+     <p></p>
+     <button onmouseover="foods()">food</button>
+     <P></P>
+     <button onmouseout="ages()">age</button>
+     <p></p>
+     <button onmousemove="games()">game</button>
+     <p></p>
+     <button onmousedown="places()">place</button>
+     <p></p>
+     <button onmouseup="movies()">movie</button>
+     <p></p>
+     <!-- Using Dom change the content and styling of the elements -->
+      <p class="text">i am pavani</p>
+      <p id="p1">my favourite hero is prabhas</p>
+      <div> my favourite movie is nanna</div>
+
+      <!-- Take a image and create 10 buttons and change the opacity of the image from 0 to 10 using these buttons -->
+
+   <div id="image" class="imgs"> <img src="./gallery.webp" height="250px", width="350px" > </div>
+    <button onclick="opacity0()">opacity0 </button>
+    <button onclick="opacity1()">opacity1 </button>
+    <button onclick="opacity2()">opacity1 </button>
+    <button onclick="opacity3()">opacity1 </button>
+    <button onclick="opacity4()">opacity1 </button>
+    <button onclick="opacity5()">opacity1 </button>
+    <button onclick="opacity6()">opacity1 </button>
+    <button onclick="opacity7()">opacity1 </button>
+    <button onclick="opacity8()">opacity1 </button>
+    <button onclick="opacity9()">opacity1 </button>
+
+
+    
+
+    <div></div>
+
+    <script>
+           // 1
+        function names(){
+            let a = document.getElementsByTagName("p")
+            a[0].innerText="PAVANI"
+        }
+        function colors(){
+            let b=document.getElementsByTagName("p")
+            b[1].innerHTML="<h1>black</h1>"
+        }
+        function foods(){
+            let c=document.getElementsByTagName("p")
+            c[2].innerText="biryani"
+        }
+        function ages(){
+             let d=document.getElementsByTagName("p")
+             d[3].innerHTML="<h1>24</h1>"
+        }
+        function games(){
+            let e=document.getElementsByTagName("p")
+            e[4].innerText="throwball"
+
+        }
+        function places(){
+            let f=document.getElementsByTagName("p")
+            f[5].innerText="beach"
+
+        }
+        function movies(){
+            let g=document.getElementsByTagName("p")
+             g[6].innerText="godavari"
+        }
+  
+
+        // 2
+
+        let nam=document.getElementsByClassName("text")
+        nam[0].innerHTML="<h2 style='color:pink'> i am Mutha pavani<h2>"
+        
+        let heros=document.getElementById("p1")
+        heros.innerHTML="<h1 style='color:blue'>my favourite hero <mark>allu arjun</mark></h1>"
+        
+        let movs=document.getElementsByTagName("div")
+        movs[0].innerHTML="<h1 style='color:red'>my favourite movie<em> varudu </em></h1>"
+         
+
+        // 3
+        function opacity0(){
+            let ops = document.getElementsByTagName("div")
+            ops[1].innerHTML="<img style='opacity:0;'src='./gallery.webp' height='200px' width='200px'>"
+        }
+        function opacity1(){
+             let ops1=document.getElementsByTagName("div")
+             ops1[1].innerHTML="<img style='opacity:0.1;'src='./gallery.webp' height='250px' width='250px'>"
+        }
+        function opacity2(){
+            let ops2=document.getElementsByClassName("imgs")
+            ops2[0].innerHTML="<img style='opacity:0.2;'src='./gallery.webp' height='300px' width='300px'>"
+        }
+        function opacity3(){
+            let ops9=document.getElementsByTagName("div")
+            ops9[1].innerHTML="<img style='opacity:0.3;'src='./gallery.webp' height='250px' width='250px'>"
+        }
+        function opacity4(){
+            let ops8=document.getElementsByTagName("div")
+            ops8[1].innerHTML="<img style='opacity: 0.4;'src='./gallery.webp' height='300px' width='300px'>"
+        }
+        function opacity5(){
+            let ops7=document.getElementsByClassName("imgs")
+            ops7[0].innerHTML="<img style='opacity:0.6'src='./gallery.webp' height='350px' width='350px'>"
+        }
+        function opacity6(){
+            let ops6=document.getElementsByClassName("imgs")
+            ops6[0].innerHTML="<img style='opacity:0.6'src='./gallery.webp' height='250px' width='250px'>"
+        }
+        function opacity7(){
+            let ops5=document.getElementById("image")
+            ops5.innerHTML="<img style='opacity:0.7'src='./gallery.webp' height='350px' width='350px'>"
+        }
+        function opacity8(){
+            let ops4=document.getElementsByClassName("imgs")
+            ops4[0].innerHTML="<img style='opacity:0.8'src='./gallery.webp' height='500px' width='500px'>"
+        }
+        function opacity9(){
+            let ops3=document.getElementsByClassName("imgs")
+            ops3[0].innerHTML="<img style='opacity:0.9'src='./gallery.webp' height='500px' width='500px'>"
+
+        }
+
+    </script>
+
+    </body>
+    </html>
