@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <!-- form events -->
+     <!-- on submit -->
+      <form action="" method="get" onsubmit="alert('your form is submitted')" >
+        <lable for="name"></lable>
+        <input type="name" id="name">
+        <button type="submit">submit</button>
+      </form>
+      <!-- on change -->
+     <form action="" method="post">
+        <input type="name"  onchange="alert('your data has been changed')" >
+        <button type="submit">submit</button>
+     </form>
+     <!-- on focus -->
+      <form action=""method="post">
+        <lable for="name"></lable>
+        <input type="email" id="name"  onfocus="alert('form has been focused')">
+        <button type="submit" >submit</button>
+        </form>
+      <!-- on blur -->
+        <form action=""method="post">
+        <lable for="name"></lable>
+        <input type="email" id="name"  onblur="alert('form blured')">
+        <button type="submit">submit</button>
+        </form>
+      <!-- on input -->
+        <form action=""method="post">
+        <lable for="name"></lable>
+        <input type="name" id="name"  oninput="alert('your input is entered')">
+        <button type="submit">submit</button>
+        </form>
+        <!-- onreset -->
+        <form action=""method="post" onreset="resets()">
+        <lable for="name"></lable>
+        <input type="name" id="name" value="mahi"  >
+        <button type="reset">reset</button>
+        </form>
+      
+          <form action=""method="post" onreset="resets1()">
+          <lable for="name"></lable>
+          <div><input type="name" id="name" value="mahi"  ></div>
+          <button type="reset">reset</button>
+          </form>
+         <!-- keyboard event and window events -->
+     <!-- key press / load -->
+     <body onkeypress="alert('key pressed')" onload="alert('your page is loaded')">
+      <p>mahi</p>
+      </body>
+       <!-- key up / resize  -->
+       <body  onkeyup="alert('key up')" onresize="alert('changed page size')">
+        <p>name</p>
+      </body>
+       <!-- key down  -->
+    <body onkeydown="alert('key down')" >
+      <p>pavani</p>
+     </body> 
+
+    
+    <script>
+        function resets1(){
+            let input=document.getElementsByTagName("div")
+            input[0].innerHTML="<input type='name' value=''>"
+        }
+        function resets() {
+          alert("The form was reset");
+       }
+
+       function outer(){
+        name="mahi"
+        function inner(){
+          console.log("my name is" , name)      
+          }
+          inner()
+
+       }
+       outer()
+    </script>
+    </body>
+
+   
+    </html>
