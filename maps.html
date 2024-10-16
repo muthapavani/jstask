@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    
+   
+
+</body>
+     <script>
+        // suares using map
+        const numbers=[1,2,3,4,5]
+        let num= numbers.map(function(e,i,a){
+           return e*e
+        })
+        console.log(num)
+
+        // to uppercase using map
+        const names=["alice","bob","charlie"]
+       let nam= names.map(function(e,i,a){
+         let name= names[i].toString()
+               return name.toUpperCase()
+
+        })
+        console.log(nam)
+        
+        // price grater themn 500 using filter
+        const product=[{ name: "Laptop", price: 1000 },{ name: "Phone", price: 500 },{ name: "Tablet", price: 700 }];
+         let pro=product.filter((e,i,a)=>{
+            return e["price"]>500
+         })
+         console.log(pro)
+
+        // calculate the total cost of all purchases using reduce 
+        const purchases = [ { price: 10, quantity: 2 },{ price: 5, quantity: 4 },{ price: 8, quantity: 1 }];
+         let cost=purchases.reduce((p,c,i,a)=>{
+            return p+c.price*c.quantity
+         },0)
+         console.log(cost)
+
+    </script>
+    </html>
