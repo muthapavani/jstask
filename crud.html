@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+
+    <p>Username:</p>
+    <button onclick="user()">enter username</button>
+    <br>
+    <br>
+
+    <table  cellpadding="10px"; cellspacing="10px";  style="border: solid 2px;">
+    
+
+    </table>
+
+    <script>
+         function user(){
+        let username=prompt('enter username:')
+        let ele=document.getElementsByTagName("p")
+        ele[0].innerHTML=`Username: <h1>${username}</h1>`
+        } 
+
+     let table=document.getElementsByTagName("table")
+    
+     let tab=document.createElement("tr")
+     table[0].appendChild(tab)
+     let tah=document.createElement("th")
+     tab.appendChild(tah)
+     tah.innerText="S.NO"
+     let tah1=document.createElement("th")
+     tab.appendChild(tah1)
+     tah1.innerText="NAME"
+     let tr1=document.createElement("tr")
+     tr1.innerHTML="<td>1</td> <td>pavani</td>"
+     table[0].appendChild(tr1)
+     let tr2=document.createElement("tr")
+     tr2.innerHTML="<td>2</td> <td>bhanu</td>"
+     table[0].appendChild(tr2)
+     let tr3=document.createElement("tr")
+     tr3.innerHTML="<td>3</td> <td>sree</td>"
+     table[0].appendChild(tr3)
+     let tr4=document.createElement("tr")
+     tr4.innerHTML="<td>4</td> <td>manaswi</td>"
+     table[0].appendChild(tr4)
+     let tr5=document.createElement("tr")
+     tr5.innerHTML="<td>5</td> <td>anu</td>"
+     table[0].appendChild(tr5)
+     console.log(table[0])
+    
+
+    </script>
+</body>
+    </html>
