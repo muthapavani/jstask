@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let a=document.createElement("form")
+    a.setAttribute("action"," ")
+    document.body.appendChild(a)
+    let a1=document.getElementsByTagName("form")[0]
+    console.log(a1)
+
+    let b=document.createElement("input")
+    b.setAttribute("id","name")
+    b.setAttribute("placeholder", "firstname")
+    b.setAttribute("name","name")
+    b.setAttribute("type","name")
+    a.appendChild(b)
+    let b1=document.getElementById("name")
+
+    let c=document.createElement("input")
+    c.setAttribute("id","lname")
+    c.setAttribute("placeholder", "lastname")
+    c.setAttribute("name","name")
+    c.setAttribute("type","name")
+    a.appendChild(c)
+    let c1=document.getElementById("lname")
+
+    let d=document.createElement("input")
+    d.setAttribute("id","age")
+    d.setAttribute("placeholder","age")
+    d.setAttribute("name","age")
+    d.setAttribute("type","name")
+    a.appendChild(d)
+    let d1=document. getElementById("age")
+
+    
+    let e=document.createElement("input")
+    e.setAttribute("id","gender")
+    e.setAttribute("placeholder","gender")
+    e.setAttribute("name","gender")
+    e.setAttribute("type","name")
+    a.appendChild(e)
+    let e1=document.getElementById("gender")
+
+    let f=document.createElement("input")
+    f.setAttribute("id","email")
+    f.setAttribute("placeholder","email")
+    f.setAttribute("name","email")
+    f.setAttribute("type","email")
+    a.appendChild(f)
+    let f1=document. getElementById("email")
+
+    let g=document.createElement("input")
+    g.setAttribute("id","city")
+    g.setAttribute("placeholder","city")
+    g.setAttribute("name","city")
+    g.setAttribute("type","name")
+    a.appendChild(g)
+    let g1=document. getElementById("city")
+
+    let h=document.createElement("button")
+    a.appendChild(h)
+    let h1=document.getElementsByTagName("button")[0]
+    h1.innerText="submit"
+     
+
+    let obj={}
+    a1.addEventListener("submit",function(e){
+    obj.name = b1.value
+    obj.lname=c1.value
+    obj.age=d1.value
+    obj.gender=e1.value
+    obj.email=f1.value
+    obj.city=g1.value
+     e.preventDefault()  
+        console.log(obj)
+    })
+
+
+</script>
+</html>
