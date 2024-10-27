@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let ele= document.createElement("form")
+       ele.setAttribute("action"," ")
+       ele.setAttribute("method"," ")
+        document.body.appendChild(ele)
+        console.log(ele)
+
+        let ele1= document.createElement("input")
+       ele1.setAttribute("type","text")
+       ele1.setAttribute("placeholder", "name")
+       ele1.setAttribute("name","name")
+           ele.appendChild(ele1)
+
+       let ele2= document.createElement("input")
+       ele2.setAttribute("type","email")
+       ele2.setAttribute("placeholder", "email")
+       ele2.setAttribute("name","email")
+       ele.appendChild(ele2)    
+
+       let ele3= document.createElement("input")
+       ele3.setAttribute("type","text")
+        ele3.setAttribute("placeholder", "password")
+       ele3.setAttribute("name","password")
+        ele.appendChild(ele3)
+
+       let ele4=document.createElement("button")
+       ele4.setAttribute("id","btn")
+       ele.appendChild(ele4)
+
+       let f=document.getElementsByTagName("form")[0]
+       console.log(f)
+       let a =document.getElementsByName("name")[0]
+       console.log(a)
+       let b=document.getElementsByName("email")[0]
+       let c=document.getElementsByName("password")[0]
+       let d=document.getElementById("btn")
+       d.innerText="submit"
+         
+       f.addEventListener("submit",function(e){
+        let names=a.value
+        let emails=b.value
+        let pass=c.value
+        e.preventDefault() 
+        console.log(names)
+        console.log(emails)
+        console.log(pass)
+
+
+        let ele5=document.createElement("p")
+        document.body.appendChild(ele5)
+        ele5.innerText=`name is ${names}`
+        let ele6=document.createElement("p")
+        document.body.appendChild(ele6)
+        ele6.innerText=`email  ${emails}`
+        let ele7=document.createElement("p")
+        document.body.appendChild(ele7)
+        ele7.innerText=`pass ${pass}`
+
+
+        localStorage.setItem("name","mutha pavani")
+        localStorage.setItem("email","muttapavani9@gmail.com")
+        localStorage.setItem("pass","P@vani38")
+        let N = localStorage.getItem("name")
+        let E =localStorage.getItem("email")
+        let P= localStorage.getItem("pass")
+         
+        if(N===`${names}` && E===`${emails}` && P===`${pass}`){
+            console.log("data submitted")
+        }
+        else{
+            console.log("invalid password or email")
+        }
+       
+       })
+    </script>
+</body>
+</html>
