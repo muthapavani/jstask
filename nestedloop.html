@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for
+        // 1 to 100
+        for(i=1;i<=100;i++){
+            console.log(i)
+        }
+        // while
+        i=100
+        while(i>=1){
+             console.log(i)
+             i--
+        }
+
+        // do while
+        i=1
+        do{
+            console.log(i)
+            i++
+        }while(i<=100)
+
+
+
+        // break
+        for(i=0;i<=50;i++){
+            if(i==49){
+                break
+            }
+            console.log(i)
+        }
+        // continue
+        for(i=0;i<=100;i++){
+            if(i==95){
+                continue
+            }
+            console.log(i)
+        }
+        // nested loops
+    //    multiplication table
+    var num=10
+    for(i=1;i<=10;i++){
+        for(j=1;j<=10;j++){
+console.log( i,'*',j,'=',i*j)
+        }
+    }
+
+    
+    var num=5
+    for(i=1;i<=5;i++){
+        if(i==4){
+            continue
+        }
+        for(j=1;j<=10;j++){
+            if(j==5){
+                break
+            }
+            console.log(i,'*',j,'=',i*j)
+        }
+
+    }
+
+    // prime number
+    num=7
+    count=0
+    while(count==0){
+        num++
+        factors=0
+        for(i=2;i<=num;i++){
+            if(num%i==0){
+                factors=0
+            }
+        }
+        if(factors==0){
+            console.log(num)
+            count++
+        }
+    }
+
+
+    // terary operator
+        a = 10
+        b = 11
+    c=(a<b)? b:
+    (a>b)? a:"equal";
+    console.log(c)
+
+    </script>
+</body>
+</html>
