@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <form action=""method=""> 
+        <input type="name" id=""  name="username" required placeholder="Username" >
+        <p></p>
+        <input type="email" name="email" required  placeholder="email">
+        <p></p>
+        <input type="password" name="pass" required  placeholder="password">
+        <p> </p>
+        <button id="btn">submit</button>
+     </form> 
+     <script>
+         let form= document.getElementsByTagName("form")[0]
+        let uname=document.getElementsByName("username")[0]
+        let email=document.getElementsByName("email")[0]
+        let passw=document.getElementsByName("pass")[0]
+        let btns=document.getElementById("btn")
+
+        form.addEventListener("submit",function(e){
+            var userreg=/[A-z 0-9.@&$^*]/gi
+            let username= uname.value 
+            let emailreg=/^[a-zA-Z0-9.*%±]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/gi
+            let emailid=email.value
+            let passreg=/^(?=.*[A-z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*(),.?]).{8,}$/gi
+            let password=passw.value
+             
+             e.preventDefault();
+
+             let rec_data=localStorage.getItem("details")
+             console.log(rec_data)
+             let data= JSON.parse(rec_data)
+
+            if(userreg.test(username)){
+                console.log("valid userame")
+                } 
+            else{
+                let para1=document.getElementsByTagName("p")[0]
+                para1.innerHTML="<p style='color:red'>Enter valid username</p>"
+                      }
+
+            if(emailreg.test(emailid)){
+                    console.log("valid email")
+                }
+                else{
+                    let para1=document.getElementsByTagName("p")[1]
+                    para1.innerHTML="<p style='color:red'>Enter valid email</p>"  
+                }
+
+            if(passreg.test(password)){
+                console.log("valid password")
+                } 
+                else {
+                   let para1=document.getElementsByTagName("p")[2]
+                para1.innerHTML="<p style='color:red'>password must contain 8 characters at leat one symbol one uppercase charecter one digit</p>"
+                }
+
+                if(username===data.uname&&emailid===data.emails &&password===data.password){
+                    console.log(alert("login successfully"))
+                    location.assign("./ecommerse.html")
+                }
+                else{
+                    console.log("not registered")
+                }
+            })
+     </script>
+</body>
+</html>

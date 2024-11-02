@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="" , method="">
+        <input type="name" name="fname"  placeholder="first name">
+        <p> </p>
+        <input type="name" name="lname"  placeholder="last name">
+        <p> </p>
+        <input type="email" name="email"  placeholder="email " >
+        <p> </p>
+        <input type="password" name="pass"  placeholder="password">
+        <p> </p>
+        <input type="username" name="uname"  placeholder="user name" >
+        <p> </p>
+        <button id="btn"> Submit</button>
+    </form> 
+    <script>
+
+
+
+        var form = document.getElementsByTagName("form")[0] 
+        let button=document.getElementById("btn")
+
+        obj={}
+        form.addEventListener("submit",function(e){
+        var fn = document.getElementsByName("fname")[0].value   
+        obj.fname=fn
+        var ln = document.getElementsByName("lname")[0].value
+        obj.lname=ln
+        var em = document.getElementsByName("email")[0].value
+        obj.emails=em
+        var pas = document.getElementsByName("pass")[0].value
+        obj. password=pas
+        var un= document.getElementsByName("uname")[0].value
+        obj. uname=un
+        let emr= /^[A-z 0-9.*@#$%^&*]+@[A-z 0-9]+.[A-z]{2,}$/gi
+        let passr=/^(?=.*[A-z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*(),.?]).{8,}$/gi
+        let  unr=/[A-z 0-9 .*#$%^&*]/gi
+        console.log(obj)
+        e.preventDefault()
+
+        if (emr.test(em)){
+            console.log("valid email")
+        }
+         else{
+            let ele=document.getElementsByTagName("p")[0]
+            ele.innerText="enter valid mail"
+         }
+
+         if (passr.test(pas)){
+            console.log("valid password")
+        }
+         else{
+            let ele=document.getElementsByTagName("p")[0]
+            ele.innerText="enter valid password"
+         }
+
+         if (unr.test(un)){
+            console.log("valid username")
+        }
+         else{
+            let ele=document.getElementsByTagName("p")[0]
+            ele.innerText="enter valid  username"
+         }
+
+       
+         
+         let store_data=JSON.stringify(obj)
+         localStorage.setItem("details",store_data)
+
+         if(em==obj.emails&&pas==obj.password&&un==obj.uname){
+            console.log(alert("registration successfull"))
+            location.assign("./login.html")
+         }
+         else{
+            console.log("please complete registration")
+         }
+
+        })
+
+
+    </script>
+    
+</body>
+</html>
