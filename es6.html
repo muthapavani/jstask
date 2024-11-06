@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    <!-- destructuring -->
+     let arr=[1,2,4,7]
+     const[a,b,c,d]=arr
+     console.log(arr)
+
+     let obj2={
+        name:"pavani",age:20
+     }
+     const {name:mahi}=obj2
+     console.log(mahi)
+
+    // spread operator
+    let arr1=[1,2,3,4,5,6,7,25,6,7,]
+    let arr2=[...arr1]
+    console.log(arr2)
+    let arr3=[...arr1,11,2,33,54,...arr2]
+    console.log(arr3)
+    console.log(Math.max(...arr3))
+
+
+    let obj={name:"mahi",age:20}
+    let obj1={...obj,city:"hyd"}
+    console.log(obj1)
+
+
+    // rest operator
+    
+    function multiply(...a){
+        let mul=1
+        for(i of a){
+            mul=mul*i
+        }
+        console.log(mul)
+
+    }
+    multiply(1,2,3,4,5,6,7)
+
+    function sum(...a){
+        sum=0
+        for(i of a){
+            sum=sum+i
+        }
+        console.log(sum)
+    }
+    sum(1,2,3,4,5,6,7,8,8,9,)
+    
+
+    // shallo copy
+    
+    let arrs= [1,2,3,3,6,9]
+    let arrt=arrs
+    arrt[0]=30
+    console.log(arrs)
+
+   let objd={name:"mahi",age:20}
+    let objs=obj
+    objs.name="pavani"
+    console.log(objd)
+
+    // deep copy
+
+    let arrd=[1,4,6,7]
+    let arr4= JSON.parse(JSON.stringify(arrd))
+    arr4[1]=20
+    console.log(arrd)
+    console.log(arr4)
+
+     let obj3={name:"mahi",age:50}
+     let obj4= JSON.parse(JSON.stringify(obj3))
+     obj4.name="pavani"
+      console.log(obj3)
+      console.log(obj4)
+
+
+    //   let  and const
+       
+     let s=50
+     const t= 40
+    //  t=90 
+     s=80
+     console.log(s)
+     console.log(t)
+
+
+     let arrv=[1,3,5]
+     const arrn=[1,4,7,9]
+      arrv[1]=80
+      arrn[3]=30
+      console.log(arrv)
+      console.log(arrn)
+
+    //   arrow function
+       const add=(a,b)=>{
+        return a+b
+       }
+       console.log(add(2,4))
+
+       let mul=(a,b)=>{
+        return a*b
+       }
+       console.log(mul(2,7))
+
+
+    //    string literals or template literals or backticks
+    const name=`pavani
+                mahi`
+    const greeting=`hello ${name}`
+        console.log(greeting)
+
+        let names="mahi"
+        console.log(`hello ${names}`)
+
+        // default parameters
+
+        function sumd(a,b=1){
+            return a*b
+        }
+        console.log(sumd(9))
+
+        adds=(a,b=5)=>{
+            return a/b
+        }
+        console.log(10)
+
+
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>
