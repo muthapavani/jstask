@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise=new Promise ((resolve,reject)=>{
+            let num=20
+            if(num<30){
+                resolve("less then 30")
+            }
+            else{
+                reject("grater then 30")
+            }
+        })
+        promise.then(()=>{
+            console.log("promise is fullfilled")
+        }).catch(()=>{
+            console.log("promise is rejected")
+        }).finally(()=>{
+            console.log("it will be executed")
+        })
+
+
+    let prom=new Promise((resolve,reject)=>{
+        user="mahi"
+        pass="12343"
+        if(user==="mahi"&&pass=="12343"){
+            resolve("login successfully")
+        }
+        else{
+            reject("invalid credentials")
+        }
+    })
+    prom.then((tru)=>{
+        console.log(tru)
+    }).catch((fals)=>{
+        console.log(fals)
+    })
+
+
+
+    let marks=new Promise((res,rej)=>{
+       let marks=60
+        if(marks>=80){
+            res("1st class")
+        }
+        else if(marks>=50){
+            res("2nd class")
+        }
+        else{
+            rej("fail")
+        }
+    })
+    marks.then((pass)=>{
+        console.log(pass)
+    }).catch((fail)=>{
+        console.log(fail)
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <br>
+    <br>
+
+
+    <script>
+   setInterval(()=>{
+     setTimeout(()=>{
+        alert("drink water")
+     },120*60*1000)  
+    },120*60*1000)
+
+    //  stop watch
+    let body=document.getElementsByTagName("body")[0]
+    let head=document.createElement("h1")
+    head.innerText="STOP WATCH"
+    body.appendChild(head)
+    head.style.backgroundColor="red"
+    head.style.textAlign="center"
+    head.style.padding="20px"
+    let div=document.createElement("div")
+    body.appendChild(div)
+    div.style.display="flex"
+    div.style.gap="20px"
+    div.style.justifyContent="center"
+    div.style.marginTop="50px"
+
+    let bttn=document.createElement("button")
+    bttn.innerText="START"
+    bttn.style.backgroundColor="red"
+    bttn.style.height="50px"
+    bttn.style.width="150px"
+    bttn.style.border="2px solid black"
+    bttn.style.textAlign="center"
+    div.appendChild(bttn)
+
+    let p=document.createElement("p")
+    p.innerText="00:00"
+    p.style.backgroundColor="red"
+    p.style.fontSize="50px"
+    p.style.height="50px"
+    p.style.width="150px"
+    p.style.border="2px solid black"
+    p.style.textAlign="center"
+    div.appendChild(p)
+
+   
+
+    let btns=document.createElement("button")
+    btns.innerText="STOP"
+    btns.style.backgroundColor="red"
+    btns.style.height="50px"
+    btns.style.width="150px"
+    btns.style.border="2px solid black"
+    btns.style.textAlign="center"
+
+    div.appendChild(btns)
+
+   let   intervalId 
+    const counts=bttn.addEventListener("click",function(){
+        count=0
+        intervalId = setInterval(()=>{
+        count++
+        console.log(count)
+        p.innerText=count
+    },200)
+    })
+    
+    btns.addEventListener("click",function(){
+         setTimeout(()=>{
+          clearInterval(  intervalId )
+         })
+      })
+   
+
+    </script>
+</body>
+</html>

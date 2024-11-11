@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // Create an object using class and inheritance concepts
         class classRoom {
-            constructor(name){
-                this.name=name
-                
+            constructor(name) {
+                this.name = name
+
             }
-        
-    All(){
-        return `institute name ,${this.name}`;
-    } 
-}
- 
-  class students extends classRoom{
-              constructor (name,group,gender){
+
+            All() {
+                return `institute name ${this.name}`;
+            }
+        }
+
+        class students extends classRoom {
+            constructor(name, group, gender) {
                 super(name)
-                this.group=group
-                this.gender=gender
-              }
+                this.group = group
+                this.gender = gender
+            }
 
-              detail(){
-                return `name is ${this.name}, group name is ${this.group}, gender is ${this.gender}`;
-              }
-  }
-   
-  class age  extends classRoom {
-           constructor (name,age,batch){
-            super(name)
-            this.age=age
-            this.batch=batch
-           }
+            detail() {
+                return `name is ${this.name} group name is ${this.group} gender is ${this.gender}`;
+            }
+        }
 
-           std() {
-            return `name is ${name}, age is ${age}, ${this.batch}, batch `;
-           }
-        
-  }
+        class age extends classRoom {
+            constructor(name, age, batch) {
+                super(name)
+                this.age = age
+                this.batch = batch
+            }
 
-  const Alls = new classRoom("10k coders","20R")
-             console.log(Alls)
-  const  details=new students("pavani","cse","female")  
-             console.log(details)
-  const  stds=new age("pavani"," 23 ","20R")
-  console.log(stds)
-            
+            std() {
+                return `name is ${this.name}, age is ${this.age}, ${this.batch}, batch `;
+            }
+
+        }
+
+        const Alls = new classRoom("10k coders", "20R")
+        console.log(Alls.All())
+        const details = new students("pavani", "cse", "female")
+        console.log(details.detail())
+        const stds = new age("pavani", " 23 ", "20R")
+        console.log(stds.std())
 
 
-//    class   
-   class person{
-    constructor(name,age){
-        this.name=name
-        this.age=age
-    }
-    greet(){
-        return `Hello ,my name is ${this.name},age is  ${this.age}`
-    }
-   }
-   let det=new person("pavani","23")
-   console.log(det)
-   console.log(det.greet())
+
+        //    class   
+        class person {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+            }
+            greet() {
+                return `Hello ,my name is ${this.name},age is  ${this.age}`
+            }
+        }
+        let det = new person("pavani", "23")
+        console.log(det)
+        console.log(det.greet())
 
 
     </script>
 </body>
+
 </html>
